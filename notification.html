@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button onclick="getpermision()">Get Permission</button>
+    <button onclick="Notify()">Send Notification</button>
+
+    <script>
+
+        function getpermision(){
+
+            Notification.requestPermission();
+
+        }
+
+        function Notify(){
+          Push.create("Visit Our New Website Duku Official", {
+                body: "Certified Professionall",
+                icon: "p.png",
+                timeout: 9000,
+                onClick: function(){
+                    window.open("https://dukuofficial.ml")
+
+                }
+            });
+        }
+    </script>
+</body>
+</html>
